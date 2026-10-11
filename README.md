@@ -200,31 +200,84 @@ However, a predicted biosynthetic gene cluster does not demonstrate that a compo
 | Bakta CDS predictions | 9,777 |
 | antiSMASH predicted regions | 42 |
 
-## Figures
+## Figures and Interpretation
 
+### 1. Illumina Read Quality Control
 
+The following FastQC plots show per-base Phred quality scores for the Illumina dataset (`SRR8841085`), before and after Trimmomatic preprocessing. R1 and R2 represent the first and second reads of each paired-end fragment.
 
-### Illumina Read Quality
+#### Raw R1 — Before trimming
 
-![Raw R1 quality](figures/01_raw_R1_quality.png)
+![Raw R1 per-base quality](figures/01_raw_R1_quality.png)
 
-![Raw R2 quality](figures/02_raw_R2_quality.png)
+**Interpretation:** The plot shows the distribution of base quality scores across raw R1 reads. Quality decreases toward the 3′ end, indicating lower confidence in bases near the read ends.
 
-![Trimmed R1 quality](figures/03_trimmed_R1_quality.png)
+#### Raw R2 — Before trimming
 
-![Trimmed R2 quality](figures/04_trimmed_R2_quality.png)
+![Raw R2 per-base quality](figures/02_raw_R2_quality.png)
 
-### Assembly Quality
+**Interpretation:** Raw R2 shows stronger 3′-end quality degradation than R1. This supported quality-based trimming before downstream analysis.
 
-[View the QUAST Nx plot](figures/04_assembly_Nx_plot.pdf)
+#### Trimmed R1 — After Trimmomatic
 
-[View the cumulative assembly plot](figures/05_assembly_cumulative_plot.pdf)
+![Trimmed R1 per-base quality](figures/03_trimmed_R1_quality.png)
 
-[View the GC comparison plot](figures/06_assembly_GC_comparison.pdf)
+**Interpretation:** This plot shows R1 quality after Trimmomatic preprocessing. Low-quality terminal regions were reduced while retaining reads suitable for downstream mapping and polishing.
 
-### Genome Annotation
+#### Trimmed R2 — After Trimmomatic
+
+![Trimmed R2 per-base quality](figures/04_trimmed_R2_quality.png)
+
+**Interpretation:** This plot shows R2 quality after trimming. Read retention was evaluated alongside quality: 7,066,880 paired reads remained from 8,330,624 original pairs, giving approximately 84.9% paired-read retention.
+
+### 2. Genome Assembly Quality Assessment
+
+QUAST was used to compare the Canu draft assembly with the Pilon-polished assembly. The assembly contained 65 contigs before and after polishing.
+
+#### Nx plot
+
+[View the QUAST Nx plot (PDF)](figures/04_assembly_Nx_plot.pdf)
+
+**What it shows:** Contig length thresholds across cumulative assembly-length fractions. N50 is the contig length at which contigs of that length or longer account for at least 50% of the total assembly length.
+
+**Result:** N50 increased from 380,316 bp in the Canu assembly to 382,560 bp after Pilon polishing.
+
+#### Cumulative assembly plot
+
+[View the cumulative assembly plot (PDF)](figures/05_assembly_cumulative_plot.pdf)
+
+**What it shows:** The cumulative length of contigs as they are added in descending order of length. It helps visualize how assembly length is distributed among contigs.
+
+#### GC content comparison
+
+[View the QUAST GC comparison plot (PDF)](figures/06_assembly_GC_comparison.pdf)
+
+**What it shows:** GC-content distributions for the Canu draft and Pilon-polished assemblies.
+
+**Result:** The overall GC content reported by QUAST was 70.58% for Canu and 70.78% for Pilon.
+
+### 3. Genome Annotation
+
+#### Bakta genome map
 
 ![Bakta genome map](figures/07_bakta_genome_map.png)
+
+**What it shows:** A visualization of genomic features predicted by Bakta across the assembled contigs.
+
+**Result:** Bakta predicted 9,777 coding-sequence (CDS) features, 84 tRNAs, 27 rRNAs, 39 ncRNAs and 1 tmRNA. These are computational annotations and should not be treated as experimentally confirmed features.
+
+### Figure Interpretation Summary
+
+| Figure | Dataset or output | Main purpose |
+|---|---|---|
+| `01_raw_R1_quality.png` | Raw Illumina R1 | Assess initial base quality |
+| `02_raw_R2_quality.png` | Raw Illumina R2 | Assess initial base quality |
+| `03_trimmed_R1_quality.png` | Trimmed Illumina R1 | Evaluate post-trimming quality |
+| `04_trimmed_R2_quality.png` | Trimmed Illumina R2 | Evaluate post-trimming quality |
+| `04_assembly_Nx_plot.pdf` | QUAST | Assess contig-length distribution |
+| `05_assembly_cumulative_plot.pdf` | QUAST | Assess cumulative assembly length |
+| `06_assembly_GC_comparison.pdf` | QUAST | Compare assembly GC content |
+| `07_bakta_genome_map.png` | Bakta | Visualize predicted genomic features |
 ## Limitations
 
 - This is an independent computational reanalysis of publicly available sequencing data.
