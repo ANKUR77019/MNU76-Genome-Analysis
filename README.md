@@ -315,3 +315,29 @@ It also demonstrated the complementary strengths of sequencing technologies:
 The publicly available MNU76 sequencing dataset and the original research study provided the basis for this independent computational reanalysis.
 
 This repository is intended as a bioinformatics learning, reproducibility and portfolio project and does not claim ownership of the original biological discoveries.
+
+## Execution Evidence
+
+### 1. Canu Genome Assembly
+![Canu assembly command](screenshots/01_canu_assembly_command.png)
+
+### 2. Illumina Read Mapping
+![BWA-MEM2 mapping](screenshots/02_illumina_read_mapping_command.png)
+
+### 3. Mapping Statistics
+![SAMtools mapping statistics](screenshots/03_samtools_mapping_statistics.png)
+
+### 4. Assembly Polishing
+![Pilon polishing output](screenshots/04_pilon_polishing_output.png)
+
+### 5. CheckM Assessment
+![CheckM assessment limitation](screenshots/05_checkm_limitation.png)
+
+### 6. Genome Annotation
+![Bakta annotation summary](screenshots/06_bakta_annotation_summary.png)
+
+### 7. Biosynthetic Gene Cluster Prediction
+![antiSMASH results](screenshots/07_antismash_region_summary.png)
+
+### 8. Assembly Quality Assessment
+![QUAST assembly report](screenshots/08_quast_assembly_report.png)
