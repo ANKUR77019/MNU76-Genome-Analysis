@@ -236,7 +236,8 @@ QUAST was used to compare the Canu draft assembly with the Pilon-polished assemb
 
 #### Nx plot
 
-[View the QUAST Nx plot (PDF)](figures/04_assembly_Nx_plot.pdf)
+![QUAST Nx plot](figures/08_assembly_Nx_plot.png)
+
 
 **What it shows:** Contig length thresholds across cumulative assembly-length fractions. N50 is the contig length at which contigs of that length or longer account for at least 50% of the total assembly length.
 
@@ -244,13 +245,13 @@ QUAST was used to compare the Canu draft assembly with the Pilon-polished assemb
 
 #### Cumulative assembly plot
 
-[View the cumulative assembly plot (PDF)](figures/05_assembly_cumulative_plot.pdf)
+![QUAST cumulative assembly plot](figures/09_assembly_cumulative_plot.png)
 
 **What it shows:** The cumulative length of contigs as they are added in descending order of length. It helps visualize how assembly length is distributed among contigs.
 
 #### GC content comparison
 
-[View the QUAST GC comparison plot (PDF)](figures/06_assembly_GC_comparison.pdf)
+![QUAST GC content comparison](figures/10_assembly_GC_comparison.png)
 
 **What it shows:** GC-content distributions for the Canu draft and Pilon-polished assemblies.
 
