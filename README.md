@@ -202,15 +202,29 @@ However, a predicted biosynthetic gene cluster does not demonstrate that a compo
 
 ## Figures
 
-The repository contains selected figures from the analysis:
 
-- Illumina raw read quality
-- Illumina trimmed read quality
-- Assembly Nx plot
-- Assembly cumulative plot
-- Assembly GC comparison
-- Bakta genome map
 
+### Illumina Read Quality
+
+![Raw R1 quality](figures/01_raw_R1_quality.png)
+
+![Raw R2 quality](figures/02_raw_R2_quality.png)
+
+![Trimmed R1 quality](figures/03_trimmed_R1_quality.png)
+
+![Trimmed R2 quality](figures/04_trimmed_R2_quality.png)
+
+### Assembly Quality
+
+[View the QUAST Nx plot](figures/04_assembly_Nx_plot.pdf)
+
+[View the cumulative assembly plot](figures/05_assembly_cumulative_plot.pdf)
+
+[View the GC comparison plot](figures/06_assembly_GC_comparison.pdf)
+
+### Genome Annotation
+
+![Bakta genome map](figures/07_bakta_genome_map.png)
 ## Limitations
 
 - This is an independent computational reanalysis of publicly available sequencing data.
