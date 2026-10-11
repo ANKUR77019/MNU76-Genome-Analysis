@@ -315,6 +315,7 @@ It also demonstrated the complementary strengths of sequencing technologies:
 The publicly available MNU76 sequencing dataset and the original research study provided the basis for this independent computational reanalysis.
 
 This repository is intended as a bioinformatics learning, reproducibility and portfolio project and does not claim ownership of the original biological discoveries.
+Original Paper link : https://journals.asm.org/doi/10.1128/mra.01362-25
 
 ## Execution Evidence
 
