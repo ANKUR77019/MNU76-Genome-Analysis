@@ -1,0 +1,27 @@
+MNU76 Genome Analysis — Software and Tools
+
+Operating environment:
+- Linux on Windows Subsystem for Linux (WSL)
+- Conda environments used for tool isolation
+
+Read quality control:
+- FastQC
+- Trimmomatic v0.38 was used in the original published workflow; the version used in this reanalysis should be verified from the installed environment.
+
+Assembly and polishing:
+- Canu v2.2
+- BWA-MEM2 v2.2.1
+- SAMtools — version to verify
+- Pilon v1.24
+- QUAST v5.3.0
+
+Genome assessment and annotation:
+- CheckM v1.2.5 (final completeness/contamination result unavailable because pplacer was terminated)
+- Bakta v1.12.1
+- Bakta database: light v6.0
+
+Biosynthetic gene cluster prediction:
+- antiSMASH v8.0.4
+
+Note:
+Tool versions are listed where they were recorded during the analysis. Any version marked for verification should be checked against the actual environment before claiming it as confirmed.
