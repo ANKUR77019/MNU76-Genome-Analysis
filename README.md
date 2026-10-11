@@ -275,9 +275,9 @@ QUAST was used to compare the Canu draft assembly with the Pilon-polished assemb
 | `02_raw_R2_quality.png` | Raw Illumina R2 | Assess initial base quality |
 | `03_trimmed_R1_quality.png` | Trimmed Illumina R1 | Evaluate post-trimming quality |
 | `04_trimmed_R2_quality.png` | Trimmed Illumina R2 | Evaluate post-trimming quality |
-| `04_assembly_Nx_plot.pdf` | QUAST | Assess contig-length distribution |
-| `05_assembly_cumulative_plot.pdf` | QUAST | Assess cumulative assembly length |
-| `06_assembly_GC_comparison.pdf` | QUAST | Compare assembly GC content |
+| `08_assembly_Nx_plot.png` | QUAST | Assess contig-length distribution |
+| `09_assembly_cumulative_plot.png` | QUAST | Assess cumulative assembly length |
+| `10_assembly_GC_comparison.png` | QUAST | Compare assembly GC content |
 | `07_bakta_genome_map.png` | Bakta | Visualize predicted genomic features |
 ## Limitations
 
